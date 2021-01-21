@@ -1,0 +1,19 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "use sass",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass" : "node-sass scss/style.scss  css/style.css  -w"
+  },
+  "keywords": [
+    "sass",
+    "in",
+    "portfolio"
+  ],
+  "author": "Sonam",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

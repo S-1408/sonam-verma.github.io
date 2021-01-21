@@ -1,0 +1,38 @@
+
+
+.aside{
+    .logo{
+        a{
+            &:before{
+                border-top:4px solid #ec1839;
+                border-left:4px solid #ec1839;
+            }
+            &:after{
+                border-bottom:4px solid #ec1839;
+                border-right:4px solid #ec1839;
+            }
+            &:hover{
+                color:#ec1839;
+            }
+        }
+    }
+   
+}
+.section-title {
+    h2{
+        &:before{
+            background-color: #ec1839;
+        }
+    }
+}
+aside{
+    .nav-toggler{
+
+        & span , &:before, &:after{
+            background-color: #ec1839;
+        }
+    }
+}
+
+
+    
