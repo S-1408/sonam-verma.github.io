@@ -38,24 +38,23 @@
 
 <body>
 
-    <!-- navbar -->
-   <header>
-<input type="checkbox" id='check'>
-<label for="check" class="checkbtn">
-    <i class="fas fa-bars"></i>
-</label>
-       <nav class="nav_item">
+ 
+   <nav>
+       <div class="logo">
         <img src="./images/sv.png" class="image-style"  alt="img">
 
-           <ul class="nav_links">
-            <li><a class="active" href="#">HOME</a></li>
-
-               <li><a href="#">ABOUT</a></li>
-               <li><a href="#">PROJECT</a></li>
-               <li><a href="#">CONTACT</a></li>
-           </ul>
-       </nav>
-   </header>
+       </div>
+       <input type="checkbox" id="click">
+       <label for="click" class="menu-btn">
+           <i class="fas fa-bars"></i>
+       </label>
+       <ul >
+           <li><a  href="#">Home</a></li>
+           <li><a   href="#about">About</a></li>
+           <li><a   href="#project">Project</a></li>
+           <li><a  href="#contact">Contact</a></li>
+       </ul>
+   </nav>
 
     <!-- navbar ends -->
 
@@ -102,15 +101,16 @@
                 </div>
             </div>
 
-            <div class="scroll-down">
-                
-            </div>
+            <a href="#about"> <div class="scroll-down">
+              
+            </div>  </a>
         </div>
         <!-- First Page Ends -->
         
     </div>
 
     <!-- About Page-->
+    
     <div class="second-page" id="about"  >
         <h4>ABOUT ME</h4>
         <h4>ABOUT ME</h4>
@@ -195,18 +195,19 @@
                        
                     </div><br>
                     <div class="text-center">
-                        <a href="Sonam_Verma_web_developer.pdf" class="btn btn-outline-dark resume">View Resume</a>
+                        <a href="images/Sonam_Verma_web_developer.pdf" class="btn btn-outline-dark resume">View Resume</a>
                     </div>
                 </div>
             </div>
+            
         </div>
-       
+        
     </div>
     <!-- About Page Ends -->
-
+   
     <!-- Project page start-->
   
-                    <div class="control">
+                    <div class="control" id="project">
                         <h4  class="project">PROJECTS</h4>
 
                         <ul>
@@ -329,6 +330,24 @@
                 <!-- react project -->
                 <div class="col-md-4 itemImg react">
                     <div class="card mb-4">
+                       <img class="card-img-top  " src="images/react/json-server.png" alt="Card image cap">
+                       <div class="card-body">
+                          <h5 class="card-title">User Data App</h5>
+                          <p class="card-text">REDUX | React Material-UI | CRUD | JSON-SERVER | UseSelector | UseDispatch | UseParam | UseEffect | UseState | react-router-dom | axios<br>
+                     
+                         </p>
+                          <a href="https://github.com/S-1408/restapi-with-jsonserver-reactredux" class="btn btn-outline-dark btn-sm" target="_blank"
+                          title="Check on GitHub" rel="noreferrer nofollow">
+                          <span class="fa fa-github"></span>  View Code</a>
+                          <br>
+                          <br>
+                          
+                       </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 itemImg react">
+                    <div class="card mb-4">
                        <img class="card-img-top  " src="images/react/monster.png" alt="Card image cap">
                        <div class="card-body">
                           <h5 class="card-title">Monster App</h5>
@@ -362,7 +381,7 @@
                        </div>
                     </div>
                 </div>
-            
+               
     <!-- end react project -->
     <div class="col-md-4 itemImg javaScript">
         <div class="card mb-4">
@@ -434,7 +453,7 @@
     <!-- Footer -->
     <h4 class="footer-center" >Get connected with me on social networks!</h4>
 
-    <footer  >
+    <footer id="contact"  >
 
       
          
@@ -509,6 +528,7 @@
     <script src="js/main.js">
  
     </script>
+   
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </body>
 

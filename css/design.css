@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x:hidden;
 }
 
 * {
@@ -39,10 +40,12 @@ header{
     color: rgb(219, 100, 20);
 }
 
+
 .first-page {
     text-align: center;
     padding-top: 10%;
     padding-bottom:14%;
+    height:100vh
 }
 
 .first-page .name {
@@ -61,33 +64,7 @@ li a{
     padding:10px;
   
 }
-.nav_links{
-    list-style: none;
-}
-.nav_links li{
-    display: inline-block;
-    padding: 0px 20px;
-    text-transform: capitalize;
-    margin-top:20px;
 
-
-}
- .nav_item{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-.checkbtn{
-    font-size: 30px;
-    float: right;
-    line-height: 80px;
-    margin-right: 40x;
-    cursor:pointer;
-}
-#check{
-    display: none;
-}
 @media (max-width:952px){
     label.log{
         font-size:30px;
@@ -98,48 +75,103 @@ li a{
 
     }
 }
-@media(max-width:858px){
-    .checkbtn{
-        display: block;
-    }
-    .nav_links{
-        position:fixed;
-        width:100%;
-        height:100vh;
-        top:80px;
-        left:0;
-        text-align: center;
-    }
-    .nav_links li{
-        display: block;
-    }
-    .nav_links li a{
-       
-        font-size:20px;
-    }
-    #check:checked ~ ul{
-        left:0;
-    }
-}
-.nav_links li a{
-    transition: all 0.3s ease 0s;
-    font-size: 15px;
-    color:#00c6bc;
-    font-weight: 700;
-}
-.nav_links li a:hover{
-    color:white;
-    text-decoration: none;
-    background-color:#00c6bc;
-    padding:10px;
-    border-radius: 10px;
-    transition: .3s;
-}
+
+
 .btn .work-button{
     color: rgb(219, 100, 20);
     text-decoration: none;
     padding: 4px 0;
     
+}
+
+/* nav */
+nav{
+    height:80px;
+    position: fixed;
+    z-index:10;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 50px 0px 100px;
+    background-color: white;
+    left:0;
+    right:0;
+    top:0
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+   
+    
+  
+}
+nav ul li{
+    margin:0 30px;
+    cursor: pointer;
+}
+nav ul li a{
+    color: skyblue;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+   
+}
+nav ul li a:hover{
+   border-bottom: 2px solid skyblue;
+   text-decoration: none;
+}
+nav .menu-btn{
+    color:rgb(34, 240, 240);
+    font-size:30px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+#click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+}
+@media(max-width:940px){
+    nav ul{
+        position:fixed;
+        top:80px;
+        left:-100%;
+        height: 400px;
+        width:100%;
+        display:block;
+        text-align: center;
+        transition: all 0.3s ease;
+        background-color: black;
+        color:white;
+        z-index: 1;
+
+    }
+    nav ul li{
+        margin:40px 0;
+        text-decoration: none;
+
+    }
+    nav ul li a{
+        font-size:20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    nav .menu-btn{
+        color:skyblue;
+        font-size:30px;
+        cursor: pointer;
+        display: block;
+    }
+    #click:checked ~ ul{
+        left:0%;
+    }
+    .first-page .scroll-down{
+        display: none;
+    }
 }
 h2{
     height:70px;
@@ -205,8 +237,8 @@ h2 span:nth-child(7){
         0 50px 25px rgba(0,0,0,0.4);
     }
 }
-.first-page .wrapper {
-    display: inline-flex;
+.first-page h1{
+   margin-top: 70px;
 
 }
 .first-page .wrapper .static-text{
@@ -225,7 +257,7 @@ h2 span:nth-child(7){
 }
 .first-page .wrapper .dynamic-text li{
     margin-left: 15px;
-    margin-top:-5px;
+    /* margin-top:-5px; */
     color: white;
     list-style: none;
     font-size: 40px;
@@ -266,7 +298,10 @@ h2 span:nth-child(7){
 }
 .second-page{
     position: relative;
+   
 
+}.about-section{
+    height: 100vh;
 }
 .second-page h4{
     position:absolute;
@@ -343,7 +378,7 @@ h2 span:nth-child(7){
 
 .skills {
    
-width:500px;
+/* width:500px; */
 margin:60px auto;
 background-color: rgb(117, 221, 212);
 color: #00c6bc;
@@ -583,4 +618,30 @@ transition:all 0.3s ease-out;
                 opacity:0;
                 top:90%
             }
+        }
+        @media only screen and (max-width: 600px){
+            .second-page h4{
+               
+            font-size: 30px;
+            }
+            
+            .wrapper .static-text{
+                display: inline;
+            }
+            .control ul{
+                display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+
+            }
+           .control ul li{
+            margin:5px;
+           }
+           .description{
+               margin-top: -130px;
+           }
+           .first-page h1{
+            margin-top: 200px;
+         
+         }
         }
