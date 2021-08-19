@@ -17,30 +17,10 @@ html, body {
     padding-bottom: 30px;
 }
 
-.navbar{
-    font-weight: bold;
-}
 
-.navbar .brand-name{
-    color: rgb(219, 100, 20);
-}
-.navbar .brand-name:hover{
-    color: rgb(219, 100, 20);
-}
 
-#nav a {
-    display: block;
-}
-
-#nav a:hover {
-    color: rgb(219, 100, 20);
-}
-
-.pic-circle{
-    padding: 20px;
-    border-radius: 50%;
-    width:250px;
-    height:250px;
+header{
+    margin:10px;
 }
 
 .d-flex {
@@ -74,14 +54,12 @@ li a{
     color:rgb(172, 65, 65);
     text-decoration: none;
 }
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 10px;
-    /* background-color:#00c6bc ; */
-/* border-bottom: 2px solid #fff; */
 
+.image-style{
+    width:70px ;
+    height:70px;
+    padding:10px;
+  
 }
 .nav_links{
     list-style: none;
@@ -89,19 +67,73 @@ header{
 .nav_links li{
     display: inline-block;
     padding: 0px 20px;
-   
+    text-transform: capitalize;
+    margin-top:20px;
 
+
+}
+ .nav_item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40x;
+    cursor:pointer;
+}
+#check{
+    display: none;
+}
+@media (max-width:952px){
+    label.log{
+        font-size:30px;
+        padding-left:50px;
+    }
+    nav ul li a{
+        font-size:16px;
+
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    .nav_links{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        top:80px;
+        left:0;
+        text-align: center;
+    }
+    .nav_links li{
+        display: block;
+    }
+    .nav_links li a{
+       
+        font-size:20px;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
 }
 .nav_links li a{
     transition: all 0.3s ease 0s;
-    font-size: 20px;
+    font-size: 15px;
     color:#00c6bc;
-    margin-top:10px;
+    font-weight: 700;
 }
 .nav_links li a:hover{
-    color:#00c6bc;
-  /* border-bottom:2px solid rgb(8, 181, 194); */
+    color:white;
     text-decoration: none;
+    background-color:#00c6bc;
+    padding:10px;
+    border-radius: 10px;
+    transition: .3s;
 }
 .btn .work-button{
     color: rgb(219, 100, 20);
