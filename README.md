@@ -1,9 +1,5 @@
 # portfolio
 
-http://www.findshubhamsoni.com/
-
-![](images/screenshot.png)
-
 
 
 
