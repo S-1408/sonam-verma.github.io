@@ -1,8 +1,6 @@
 # portfolio
+https://s-1408.github.io/sonam-verma.github.io/
 
-http://www.findshubhamsoni.com/
-
-![](images/screenshot.png)
 
 
 
